@@ -28,19 +28,19 @@ class TestingFb extends TestCase
     
     public function testWriteThree() {	
         $Fb = new Fb(3);  
-        $writer = new Num3Format;
+        $writer = new Num3Format();
         $this->expectOutputString(sprintf("Number %d Fb is <b>%s</b></br>", $Fb->number, 'Linio'), $Fb->write($writer));
     }
     
     public function testWriteFive() {
         $Fb = new Fb(10);  
-        $writer = new Num5Format;
+        $writer = new Num5Format();
         $this->expectOutputString(sprintf("Number %d Fb is <b>%s</b></br>", $Fb->number, 'IT'), $Fb->write($writer));
     }
     
     public function testWriteThreeAndFive() {
         $Fb = new Fb(15);  
-        $writer = new Num3And5Format;
+        $writer = new Num3And5Format();
         $this->expectOutputString(sprintf("Number %d Fb is <b>%s</b></br>", $Fb->number, 'Linianos'), $Fb->write($writer));
     }
 
